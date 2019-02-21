@@ -1,51 +1,143 @@
-/* html, body{
-    height: 100%;
-} */
 body{
     text-align: center;
     font-family: 'Gruppo', cursive;
     box-sizing: border-box;
     font-weight: bold;
     background-color: #4C6E00;
-    /* background-color: #BABABA; */
 }
-
 
 button{
     text-shadow: 0px 0px 2px red;
     font-weight: bold;
-    /* background-color: black; */
     color: red;
     border-radius: 5px;
     background-color: #BABABA;
     margin: 0 0.5em;
 }
 
+button:hover{
+    cursor: pointer;
+}
+
+.clearfix {
+    overflow: auto;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.readout-panel{
+    padding: 5px;
+    background-color: black;
+}
+
+.text-glow{
+    text-shadow: 0px 3px 10px red;
+}
+
+#difficulty-div p, #game-over-div header, #board-div header, #instructions{
+    color: white;
+    padding: 1em;
+}
+
+
+
+
+
+
+
+
+
 #game-container{
     width: 100%;
-    /* margin-left: 2.5%; */
     margin-bottom: 0;
 }
 
-#board-div div span{
+.status-div{
+    width: 50%;
+    float: left;
+    margin: 0;
+}
+
+#score-span{
+    border-top-right-radius: 5px;
+    padding-left: 10px;
+    float: left;
+}
+
+#spaces-left-span{
+    padding-right: 10px;
+    border-top-left-radius: 5px;
+    float: right;
+}
+
+
+
+
+
+
+
+
+
+#difficulty-div{
+    margin-top: 1em;
+    padding: 1em;
+}
+
+
+
+
+
+
+
+
+
+#main-header-div{
+    background-color: #BABABA;
+    margin-top: 0;
+    border-radius: 5px 5px 0 0;
+}
+
+#minesweeper-header{
+    color: red;
+    margin-top: 0;
+    padding-top: 1em;
+    border-radius: 5px;
+}
+
+#minesweeper-header span{
+    margin: 0;
+    border-radius: 5px;
+}
+
+
+
+
+
+
+
+
+
+#board-div{
+    margin-top: 5em;
+}
+
+#retry-button{
+    margin: 0.5em 0;
+}
+
+span[class*="-space"]{
     border: 1px inset grey;
     height: 100%;
     background-color: #BABABA;
 }
 
-#board-div div span:hover, button:hover{
+span[class*="-space"]:hover{
     cursor: pointer;
 }
-
-#board-div div{
-    padding: 0;
-}
-
-#board-div{
-    /* width: 100vw; */
-    margin-top: 5em;
-}
-
 
 .easy-space{
     width: 10%;
@@ -59,98 +151,13 @@ button{
     width: calc(100%/14)
 }
 
-#minesweeper-header{
-    color: red;
-    margin-top: 0;
-    padding-top: 1em;
-    border-radius: 5px;
-    /* text-shadow: 0px 3px 10px red; */
-}
-
-#minesweeper-header span{
-    margin: 0;
-}
-
-.readout-panel{
-    /* border-radius: 5px; */
-    padding: 5px;
-    background-color: black;
-}
-
-.text-glow{
-    text-shadow: 0px 3px 10px red;
-}
-
-#difficulty-div{
-    margin-top: 1em;
-    padding: 1em;
-}
-/* #minesweeper-header span{
-    border-radius: 5px;
-    padding: 5px;
-    background-color: black;
-} */
-
-#main-header-div{
-    background-color: #BABABA;
-    margin-top: 0;
-    border-radius: 5px 5px 0 0;
-    /* width: 100vw; */
-}
 
 
-.tracking-div{
-    /* background-color: black; */
-    width: 50%;
-    float: left;
-    margin: 0;
-}
-
-#score-span{
-    border-top-right-radius: 5px;
-    padding-left: 10px;
-    /* border-bottom-left-radius: 5px; */
-    float: left;
-}
-#spaces-left-span{
-    /* border-bottom-right-radius: 5px; */
-    padding-right: 10px;
-    border-top-left-radius: 5px;
-    float: right;
-}
-.clearfix {
-    overflow: auto;
-}
-
-.clearfix::after {
-    content: "";
-    clear: both;
-    display: table;
-}
 
 
-footer{
-    background-color: #BABABA;
-    border-radius: 0 0 5px 5px;
-    /* margin-bottom: 0; */
-    padding-bottom: 3em;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-}
 
-footer span {
-    color: red;
-    border-radius:0px 0px 5px 5px;
-    
-}
-#instructions{
-    padding: 1em;
-    color: white;
-    /* margin-left: 10%; */
-}
+
+
 
 #game-over-div{
     background-color: black;
@@ -163,10 +170,27 @@ img{
     padding: 0;
 }
 
-#difficulty-div p, #game-over-div header, #board-div header{
-    color: white;
+
+
+
+
+
+
+
+
+footer{
+    background-color: #BABABA;
+    border-radius: 0 0 5px 5px;
+    padding-bottom: 3em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
 }
 
-#retry-button{
-    margin: 0.5em 0;
+footer span {
+    color: red;
+    border-radius:0px 0px 5px 5px;
+    
 }

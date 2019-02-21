@@ -141,10 +141,6 @@ window.onload = () => {
         retryButton.textContent = "Retry?"
         retryButton.id = "retry-button"
         retryButton.addEventListener("click", reset)
-        // var scoreHeader = document.createElement("header")
-        // scoreHeader.id = "score-header"
-        // scoreHeader.textContent = `Score: ${score}`
-        // MINESWEEPERDIV.append(scoreHeader)
         MINESWEEPERDIV.append(retryButton)
     }   
 
